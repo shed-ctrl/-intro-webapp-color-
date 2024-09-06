@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGB Color Picker</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center text-white py-4 bg-primary rounded shadow">RGB Color Picker</h1>
+        <div class="row">
+            <div class="col-12 mb-4">
+                <p class="text-center">Utiliza las barras deslizantes o los campos de texto para ajustar los valores de rojo, verde y azul. También puedes seleccionar un color directamente usando el selector de color.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="color-box p-3 shadow-lg">
+                    <label for="redRange" class="font-weight-bold text-danger">Rojo</label>
+                    <input type="range" class="form-control-range" id="redRange" min="0" max="255" value="0">
+                    <input type="number" class="form-control mt-2" id="redInput" min="0" max="255" value="0">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="color-box p-3 shadow-lg">
+                    <label for="greenRange" class="font-weight-bold text-success">Verde</label>
+                    <input type="range" class="form-control-range" id="greenRange" min="0" max="255" value="0">
+                    <input type="number" class="form-control mt-2" id="greenInput" min="0" max="255" value="0">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="color-box p-3 shadow-lg">
+                    <label for="blueRange" class="font-weight-bold text-primary">Azul</label>
+                    <input type="range" class="form-control-range" id="blueRange" min="0" max="255" value="0">
+                    <input type="number" class="form-control mt-2" id="blueInput" min="0" max="255" value="0">
+                </div>
+            </div>
+        </div>
+        <div class="row my-4">
+            <div class="col">
+                <div class="color-box p-3 shadow-lg">
+                    <input type="color" class="form-control" id="colorPicker" value="#000000">
+                </div>
+                <div id="colorBox" class="border mt-3 d-flex flex-column align-items-center justify-content-center shadow" style="height: 150px; background-color: #000000;">
+                    <p class="text-center text-white mb-1">Código Hexadecimal: <span id="hexCode">#000000</span></p>
+                    <p class="text-center text-white">Valor RGB: <span id="rgbValue">rgb(0, 0, 0)</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
